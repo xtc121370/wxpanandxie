@@ -1,0 +1,6 @@
+/* pages/wx/wx.wxss */
+page{
+
+background-color: white;
+
+}

@@ -1,0 +1,42 @@
+
+<view class='gradual-blue padding radius text-center shadow-blur'>
+<view class="cu-bar margin-top gradual-blue search">
+  <view class='search-form round'>
+    <text class="icon-search"></text>
+    <input type="text" placeholder="搜索社团名称" confirm-type="search"></input>
+  </view>
+  <view class='action'>
+    <button class='cu-btn bg-orange shadow-blur round'>搜索</button>
+  </view>
+</view>
+</view>
+
+<view class="VerticalBox" style='height:100%;'>
+  <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}" style="">
+    <view class="text-cut cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{list}}" wx:key bindtap='tabSelect' data-id="{{index}}">
+      {{item.name}}
+    </view>
+  </scroll-view>
+  
+  <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="" scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+    <view class="padding-top shadow-warp padding-lr" style='width:80%;' wx:for="{{list}}" wx:key id="main-{{index}}">
+      <view class='cu-bar solid-bottom bg-white'>
+        <view class='action text-bold'>
+          <text class='icon-title text-green'></text> Tab-{{item.name}} </view>
+      </view>
+    
+      <image style='height:200rpx;' mode='aspectFill' src='{{item.image}}'></image>
+   <view class='bg-white text-balck text-left'>
+   社团简介
+   </view>
+   <view class='bg-white text-center padding'><text>
+   {{item.show}}
+   \n
+   {{item.phone}}
+   </text>
+   </view>
+
+<button class='gradual-orange border-none button-hover'>加入我们</button>
+    </view>
+  </scroll-view>
+</view>

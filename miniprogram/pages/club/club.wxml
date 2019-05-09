@@ -1,0 +1,9 @@
+
+<view class="padding  "wx:for="{{color}}">
+
+<view class='cu-item  shadow padding bg-{{item.id}} 'style='border-radius:17rpx;height:300rpx;' >
+
+111
+{{item.id}}
+
+</view></view>

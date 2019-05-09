@@ -1,0 +1,40 @@
+<!--pages/mine/mine.wxml-->
+
+<view class="margin radius gradual-blue shadow-blur" >
+  <image mode='bottom'  src='https://image.weilanwl.com/gif/wave.gif'  class='gif-black response' style='width:100%;height:300rpx'></image>
+</view>
+<view class='tx'>
+
+<image class='cu-avatar lg round margin-left'  src='{{avatarUrl}}'></image>
+</view>
+
+
+<view class='usr'> 
+<text >微信名:</text>
+</view>
+
+
+<view class='username'><text>{{nickName}}</text></view>
+<view></view>
+<view class='phone'><text>手机号:</text><text>{{phone}}</text></view>
+<view class='padding text-center'>
+ 
+<view class='padding-xl radius shadow-warp bg-white margin-top'>
+浴室信息
+</view>
+
+
+<view class='padding-xl radius shadow-warp bg-white margin-top'>
+我的信息
+</view>
+ 
+<view class='padding-xl radius shadow-warp bg-white margin-top'>
+投递记录
+</view>
+
+<view class='padding-xl radius shadow-warp bg-white margin-top'>
+
+关于我们
+</view>
+
+</view>

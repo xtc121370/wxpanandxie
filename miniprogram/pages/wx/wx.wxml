@@ -1,0 +1,23 @@
+
+<view style='margin-top:20%;' class='padding text-center'>
+
+<image style='width:200rpx;' src='../images/logo.png' mode='widthFix' >
+</image>
+</view>
+<view class='flex \ padding justify-center'>
+<view style='width:500rpx;' class='padding text-center solids-bottom'>
+校园社团将获得您的
+</view>
+</view>
+
+<view class='padding text-center'>
+<text class='text-grey'>昵称、地区权限</text>
+</view>
+<view class='padding text-center'>
+<text class='text-grey'>个人信息权限</text>
+</view>
+
+<view  style='widht:500rpx;' class='padding text-center'>
+<button class='cu-btn block bg-gradual-blue margin-tb-sm lg'
+open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">微信登陆</button>
+</view>
