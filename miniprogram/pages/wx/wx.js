@@ -9,7 +9,10 @@ Page({
 openid:'250',
 name:'pansb',
 nickName:null,
-city:'taiguo'
+city:'taiguo',
+test:'PANsb',
+
+
   },
   onGotUserInfo: function (e){
 
@@ -61,10 +64,9 @@ var that=this;
         }
 
       })
-     /* wx.switchTab({
-        url: '../main/main',
-      })
-      */
+  wx.switchTab({
+    url: '../club/club',
+  })
     }
 
   })
@@ -75,6 +77,7 @@ var that=this;
   onLoad: function (options) {
 
     var that = this;
+
     wx.getSetting({
       withCredentials: true,
       success: function (res) {
@@ -99,14 +102,15 @@ var that=this;
                     app.globalData.openid = res.result.userInfo.openId,
                     console.log('openid:' + that.data.openid)
 
-                  wx.request({
+     wx.request({
                     url: 'http://202.206.221.94:8080/signUp',
                     data: {
-                      openId: that.data.openid,
-                    nickName: that.data.nickName,
-                      gender: that.data.gender
+                    "openId":that.data.openid,
+                    "nickName":that.data.nickName,
+                      "gender":that.data.gender
 
                     },
+                 
                     method: 'POST',
                     header: {
                       'content-type': 'application/x-www-form-urlencoded;charset=utf-8;',
@@ -114,11 +118,13 @@ var that=this;
                     },
                    
                     success: function (res) {
-                      wx.switchTab({
-                        url: '../main/main',
-                      })
-
-                      console.log('服务器返回：' + res)
+                   
+                     console.log(res.data)
+                  
+                  wx.switchTab({
+                    url: '../club/club',
+                  })
+                    
                     }
 
                   })

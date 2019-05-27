@@ -7,20 +7,18 @@
 </view>
 
  <view class='padding text-center'>
- <view class='bg-blue padding' style='display:inline-block;width:50%;'>
+ <view class='bg-blue padding' style='display:inline-block;width:50%;border-radius:15px 0 0 0;'>
 姓名
  </view>
- <view class='bg-blue padding' style='display:inline-block;width:50%;'
->
-
+ <view class='bg-blue padding' style='display:inline-block;width:50%;border-radius:0 15px 0 0;'> 
 班级
  </view>
 
 
  <view class='flex padding radius shadow-warp  bg-white align-center justify-center'style=''>
 
-     <input class='padding-sm margin-xs round'            type='number'style='border:2px #2d8cf0 solid;background-color: white;   width:50%;'name='name'></input>
-     <input  class='padding-sm margin-xs round'            type='number'style='border:2px #2d8cf0 solid;background-color: white;   width:50%;'name='class'></input>
+     <input class='padding-sm margin-xs round'  type='text'style='border:2px #2d8cf0 solid;background-color: white;   width:50%;' bindinput='name' name='name'></input>
+     <input  class='padding-sm margin-xs round' bindinput='uclass' type='text'style='border:2px #2d8cf0 solid;background-color: white;   width:50%;' name='uclass'></input>
  </view>
  
   <view class='bg-blue padding' style='display:inline-block;width:50%;'>
@@ -33,10 +31,15 @@
  </view>
   <view class='flex padding radius shadow-warp  bg-white align-center justify-center'style=''>
 
-     <input class='padding-sm margin-xs round'            type='number'style='border:2px #2d8cf0 solid;background-color: white;   width:50%;'name='name'></input>
-     <input  class='padding-sm margin-xs round'            type='number'style='border:2px #2d8cf0 solid;background-color: white;   width:50%;'name='class'></input>
+     <input class='padding-sm margin-xs round' bindinput='phone' type='number'style='border:2px #2d8cf0 solid;background-color: white;   width:50%;'name='name'></input>
+     <input  class='padding-sm margin-xs round' bindinput='address' type='text'style='border:2px #2d8cf0 solid;background-color: white;   width:50%;'name='class'></input>
  </view>
  <view class='padding bg-blue'>
  自我介绍
   </view>
+  <view class='shadow-warp bg-white' style='height:200rpx;border-radius:0 0 15px 15px;'>
+<textarea class='padding' focus='ture' bindinput='description' placeholder='请在这里输入自我介绍' style='height:200rpx;width:100%;z-index:99;'>
+</textarea></view>
+ 
+ <button class="cu-btn block bg-green margin-tb-sm lg" bindtap='upload' role="button">上传简历</button>
  </view>

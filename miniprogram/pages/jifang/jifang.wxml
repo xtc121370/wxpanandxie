@@ -1,0 +1,32 @@
+
+<view class='padding text-center'>
+<view>
+<text class="text-black text-bold text-lg" >机房实时人数
+<text class='text-red text-bold margin-top'>{{jifang}}</text>/180(人)
+</text>
+</view>
+
+<view style='margin-top:100rpx;'>
+<text class='text-black text-bold text-lg'>机房昨日人数柱形图</text>
+</view>
+
+
+<view style='border:2px #7cb5ec solid;border-radius:15px;margin-top:80rpx;'>
+
+<canvas
+  style="width:96%;   height: 250px;"
+  canvas-id="yueEle"
+  binderror="canvasIdErrorCallback"
+></canvas>
+
+</view>
+
+<view style='margin-top:80rpx;'>
+  <text>请合理安排时间去机房学习哦</text>
+</view>
+
+<view class='text-center 'style='margin-top:200rpx;'>
+<text class="text-gray" >技术支持：潘少峰、谢添成</text>
+</view>
+
+</view>

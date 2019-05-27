@@ -1,19 +1,24 @@
-// pages/mine/mine.js
-var app=getApp();
+// pages/circle/circle.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-nickName:null,
-phone:null
+
   },
-gowode:function(){
+goyushi:function(){
+
 wx.navigateTo({
-  url: '../wode/wode',
+  url: '../yushi/yushi',
 })
 
+},
+gojifang:function(){
+
+  wx.navigateTo({
+    url: '../jifang/jifang',
+  })
 },
   /**
    * 生命周期函数--监听页面加载

@@ -1,19 +1,18 @@
 {
   "pages": [
     "pages/club/club",
+    "pages/circle/circle",
+    "pages/yushi/yushi",
+    "pages/jifang/jifang",
+   
+    
     "pages/wx/wx",
+
     "pages/wode/wode",
     "pages/main/main",
-  
     "pages/mine/mine",
-
-    
-
-   
-
     "pages/index/index",
-    "pages/yushi/yushi",
-  
+   
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
@@ -29,15 +28,19 @@
   "tabBar": {
     "color": "black",
     "borderStyle": "white",
-    "list":[
-   
+    "list": [
       {
-        "pagePath": "pages/main/main",
+        "pagePath": "pages/circle/circle",
+        "text": "更多",
+        "iconPath": "pages/images/shetuan.png",
+        "selectedIconPath": "pages/images/shetuan1.png"
+      },
+      {
+        "pagePath": "pages/club/club",
         "text": "主页",
         "iconPath": "pages/images/shetuan.png",
         "selectedIconPath": "pages/images/shetuan1.png"
-      }
-      ,
+      },
       {
         "pagePath": "pages/mine/mine",
         "text": "我的",
@@ -45,5 +48,6 @@
         "selectedIconPath": "pages/images/mine1.png"
       }
     ]
-    }
+  },
+  "sitemapLocation": "sitemap.json"
 }

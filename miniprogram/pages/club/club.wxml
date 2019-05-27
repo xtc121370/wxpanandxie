@@ -1,9 +1,27 @@
 
-<view class="padding  "wx:for="{{color}}">
-
-<view class='cu-item  shadow padding bg-{{item.id}} 'style='border-radius:17rpx;height:300rpx;' >
-
-111
+<view class='padding'>
+<text class='sign'>校园社团</text>
+<text class='icon-sort lg text-gray margin-right' style='font-size:40rpx;font-weight:800;'></text>
+ <button class="cu-btn bg-blue shadow margin-left" bindtap="showModal" data-target="DrawerModalR">Right</button>
+</view>
+<view class="cu-modal drawer-modal justify-end {{modalName=='DrawerModalR'?'show':''}}" bindtap="hideModal">
+  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+    <view class="cu-list menu text-left">
+      <view class="cu-item arrow" wx:for="{{5}}" wx:key>
+        <view class="content">
+          <view>Item {{index +1}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="padding  "wx:for="{{color}}" >
+<view class='cu-item  padding solid-top bg-{{item.id}} 'style='border-top-right-radius:17rpx;border-top-left-radius:17rpx;height:260rpx;' >
+<text>社团</text>
 {{item.id}}
 
-</view></view>
+</view>
+<view class='padding shadow-warp bg-white'style='border-bottom-right-radius:17rpx;border-bottom-left-radius:17rpx;border-bottom:4px white solid;border-right:2px white  solid;border-left:2px white  solid;'>
+</view>
+</view>
+

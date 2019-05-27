@@ -1,4 +1,6 @@
 // pages/club/club.js
+const app = getApp();
+
 Page({
 
   /**
@@ -6,42 +8,66 @@ Page({
    */
   data: {
 
-
 color:[
-{
-    id:'gradual-orange'
-},
-{
-  id: 'gradual-red'
-  }
-  ,
-  {
-    id: 'gradual-blue'
-  },
-  {
-    id: 'gradual-green'
-  },
-  {
+      {
+        id: 'gradual-orange'
+      },
+      {
+        id: 'gradual-red'
+      }
+      ,
+      {
+        id: 'gradual-blue'
+      },
+      {
+        id: 'gradual-green'
+      },
+      {
 
-    id:'gradual-purple'
-  },
-  {
+        id: 'gradual-purple'
+      },
+      {
 
-    id:'gradual-pink'
-  }
+        id: 'gradual-pink'
+      }
 
 
-]
-   
+    ],
+   arry:[],
     
 
   },
-
+  showModal(e) {
+    this.setData({
+      modalName: e.currentTarget.dataset.target
+    })
+  },
+  hideModal(e) {
+    this.setData({
+      modalName: null
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+  wx.request({
+    url: 'http://202.206.221.94:8080/league',
+    data: {
 
+
+    },
+    method: 'POST',
+    header: {
+      'content-type': 'application/x-www-form-urlencoded;charset=utf-8;',
+
+    },
+ success:function(res){
+
+   console.log(res.data)
+ }
+  })
+    
   },
 
   /**
@@ -61,8 +87,55 @@ color:[
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function () {/*
+    var that = this;
+    console.log('初始数据：' + that.data.color)
+    let arr = [
+      {
+        id: 'gradual-orange'
+      },
+      {
+        id: 'gradual-red'
+      }
+      ,
+      {
+        id: 'gradual-blue'
+      },
+      {
+        id: 'gradual-green'
+      },
+      {
 
+        id: 'gradual-purple'
+      },
+      {
+
+        id: 'gradual-pink'
+      }
+
+
+    ],
+      newArr = [];
+    that.setData({
+
+      color: newArr
+    })
+
+
+    for (let i = 0, len = arr.length; i < len;) {
+      i++;
+      let currentRandom = parseInt(Math.random() * len);
+      if (!newArr.includes(arr[currentRandom])) {
+        newArr.push(arr[currentRandom]);
+
+      } else {
+        i--;
+      }
+    }
+    console.log('随机变换后' + that.data.color)
+
+
+    console.log('当前页面：' + that.data.color)*/
   },
 
   /**

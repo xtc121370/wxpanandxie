@@ -1,0 +1,24 @@
+<view class="flex bg-white padding justify-center text-center">
+
+<view class='block margin-right bg-red padding text-center light' bindtap='goyushi'>
+<text>浴室信息</text>
+</view>
+
+<view class='block margin-left bg-cyan padding text-center light' bindtap='gojifang'>
+<text>机房使用情况</text>
+</view>
+
+
+</view>
+
+<view class="flex bg-white padding justify-center text-center ">
+
+<view class='block2 margin-right bg-green  padding  text-center light'>
+<text>报修系统</text>
+</view>
+
+<view class='block2 margin-left bg-mauve padding  text-center light'>
+<text>更多推荐</text>
+</view>
+
+</view>

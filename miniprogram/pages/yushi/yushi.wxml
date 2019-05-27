@@ -1,2 +1,27 @@
-<!--pages/yushi/yushi.wxml-->
-<text>pages/yushi/yushi.wxml</text>
+<view class='padding text-center' style='margin-top:110rpx;' >
+<text class="text-black text-bold text-lg" >浴室使用情况
+<text class='text-red text-bold margin-top'>{{yushi}}</text>/300(人)
+</text>
+
+<view style='margin-top:100rpx;'>
+<text class='text-black text-bold text-lg'>浴室昨日人数折线分布图 </text>
+</view>
+<view class='bg-white  light'  style='border:2px black solid;border-radius:15px;margin-top:80rpx;'>
+
+<canvas
+  style="width:96%;   height: 250px;"
+  canvas-id="yueEle"
+  binderror="canvasIdErrorCallback"
+></canvas></view>
+
+<view class='padding text-center margin-top' >
+ 
+<text class='text-lg'>请合理安排时间去洗浴哦</text>
+</view>
+
+<view class='text-center 'style='margin-top:200rpx;'>
+<text class="text-gray" >技术支持：潘少峰、谢添成</text>
+
+</view>
+
+</view>

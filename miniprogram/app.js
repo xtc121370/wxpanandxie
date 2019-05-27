@@ -1,6 +1,8 @@
 //app.js
 App({
   onLaunch: function () {
+
+ 
     wx.getSystemInfo({
       success: e => {
         this.globalData.StatusBar = e.statusBarHeight;
@@ -19,10 +21,36 @@ App({
 
     this.globalData = {}
   },
+
   globalData:{
     openid: null,
     phone: '88888888888',
     avatarUrl:null,
-    nickName:null
+    nickName:null,
+    color: [
+      {
+        id: 'gradual-orange'
+      },
+      {
+        id: 'gradual-red'
+      }
+      ,
+      {
+        id: 'gradual-blue'
+      },
+      {
+        id: 'gradual-green'
+      },
+      {
+
+        id: 'gradual-purple'
+      },
+      {
+
+        id: 'gradual-pink'
+      }
+
+
+    ],
   }
 })

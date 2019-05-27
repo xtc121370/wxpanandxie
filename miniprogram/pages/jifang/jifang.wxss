@@ -1,5 +1,6 @@
-/* pages/yushi/yushi.wxss */
+/* pages/jifang/jifang.wxss */
 page{
+
 
   background-color: white;
 }

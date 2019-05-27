@@ -1,0 +1,19 @@
+/* pages/circle/circle.wxss */
+page{
+
+  background-color: white;
+}
+.block{
+margin-top: 200rpx;
+width: 250rpx;
+height: 250rpx;
+border-radius: 15px;
+
+}
+.block2{
+
+width: 250rpx;
+height: 250rpx;
+border-radius: 15px;
+
+}

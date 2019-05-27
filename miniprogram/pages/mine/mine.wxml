@@ -18,13 +18,8 @@
 <view></view>
 <view class='phone'><text>手机号:</text><text>{{phone}}</text></view>
 <view class='padding text-center'>
- 
-<view class='padding-xl radius shadow-warp bg-white margin-top'>
-浴室信息
-</view>
 
-
-<view class='padding-xl radius shadow-warp bg-white margin-top'>
+<view class='padding-xl radius shadow-warp bg-white margin-top' bindtap='gowode'>
 我的信息
 </view>
  
