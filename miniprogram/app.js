@@ -1,8 +1,25 @@
 //app.js
 App({
   onLaunch: function () {
+var that=this;
+    wx.request({
+      url: 'http://202.206.221.94:8080/league',
+      data: {
 
- 
+
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/x-www-form-urlencoded;charset=utf-8;',
+
+      },
+      success: function (res) {
+
+        console.log(res.data)
+       that.globalData.club=res.data;
+       console.log(that.globalData.club)
+      }
+    })
     wx.getSystemInfo({
       success: e => {
         this.globalData.StatusBar = e.statusBarHeight;
@@ -27,6 +44,7 @@ App({
     phone: '88888888888',
     avatarUrl:null,
     nickName:null,
+    club:null,
     color: [
       {
         id: 'gradual-orange'

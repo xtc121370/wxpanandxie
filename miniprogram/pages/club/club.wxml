@@ -1,27 +1,42 @@
 
 <view class='padding'>
 <text class='sign'>校园社团</text>
-<text class='icon-sort lg text-gray margin-right' style='font-size:40rpx;font-weight:800;'></text>
- <button class="cu-btn bg-blue shadow margin-left" bindtap="showModal" data-target="DrawerModalR">Right</button>
 </view>
-<view class="cu-modal drawer-modal justify-end {{modalName=='DrawerModalR'?'show':''}}" bindtap="hideModal">
-  <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
-    <view class="cu-list menu text-left">
-      <view class="cu-item arrow" wx:for="{{5}}" wx:key>
-        <view class="content">
-          <view>Item {{index +1}}</view>
+
+
+
+<view class="padding  "wx:for="{{club}}" wx:key="{{index}}" >
+
+<view class='cu-item align-center solid-top flex justify-between bg-{{item.color}} padding 'style='border-top-right-radius:17rpx;border-top-left-radius:17rpx;height:260rpx;' >
+
+<text class="text-white text-bold" style='font-size:25px;'>{{item.lNamae}}<text style='font-size:15px;'>\n \n {{item.lAddress}}</text></text>
+<view class="cu-avatar xl round margin-right" style="background-image:url({{item.id}});margin-right:10rpx;">
+</view>
+
+</view>
+
+
+<view class='action padding shadow-warp bg-white  text-cut'style='border-bottom-right-radius:17rpx;border-bottom-left-radius:17rpx;border-bottom:4px white solid;border-right:2px white  solid;border-left:2px white  solid;'data-target="Image" bindtap="showModal"data-x='{{index}}'>
+<text class='text-black cut' >
+社团介绍：{{item.description}}
+</text>
+</view>
+
+
+</view>
+
+  <view class="cu-modal {{modalName=='Image'?'show':''}}">
+    <view class="cu-dialog">
+     <image src='{{testUrl}}'></image>
+        <view class="cu-bar justify-end text-white">
+          <view class="action" bindtap="hideModal">
+       
+            <text class="icon-close "></text>
+          </view>
         </view>
+    
+      <view class="cu-bar bg-white">
+        <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">我知道了</view>
       </view>
     </view>
   </view>
-</view>
-<view class="padding  "wx:for="{{color}}" >
-<view class='cu-item  padding solid-top bg-{{item.id}} 'style='border-top-right-radius:17rpx;border-top-left-radius:17rpx;height:260rpx;' >
-<text>社团</text>
-{{item.id}}
-
-</view>
-<view class='padding shadow-warp bg-white'style='border-bottom-right-radius:17rpx;border-bottom-left-radius:17rpx;border-bottom:4px white solid;border-right:2px white  solid;border-left:2px white  solid;'>
-</view>
-</view>
-

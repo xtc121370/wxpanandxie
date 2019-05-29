@@ -1,5 +1,5 @@
 // pages/club/club.js
-const app = getApp();
+var app = getApp();
 
 Page({
 
@@ -7,40 +7,58 @@ Page({
    * 页面的初始数据
    */
   data: {
-
-color:[
+club:null,
+images:[
       {
-        id: 'gradual-orange'
+    id: 'http://r.photo.store.qq.com/psb?/V12EzWWJ3J1Roh/5B5J5uwuVM8*D7dAuUX39SXV79ibqrNo42r7*Tx.klU!/r/dMAAAAAAAAAA'
       },
       {
-        id: 'gradual-red'
+        id: 'http://r.photo.store.qq.com/psb?/V12EzWWJ3J1Roh/HPicE8JMM2cBNNojqLznhGjv5Q2bDhuewx1qvrcc8ac!/r/dAUBAAAAAAAA'
       }
       ,
       {
-        id: 'gradual-blue'
+        id: 'http://r.photo.store.qq.com/psb?/V12EzWWJ3J1Roh/JqDM2nFrWvrUU.fMMeRj7HYvHjUgk2PAcSQIb05LMZg!/r/dL4AAAAAAAAA'
       },
       {
-        id: 'gradual-green'
-      },
-      {
-
-        id: 'gradual-purple'
+        id: 'http://r.photo.store.qq.com/psb?/V12EzWWJ3J1Roh/oJ0KyZ8.h5Zpf2xiH1p*7X1vGogLwi.7J.t5aG3iibA!/r/dLYAAAAAAAAA'
       },
       {
 
-        id: 'gradual-pink'
+        id: 'http://r.photo.store.qq.com/psb?/V12EzWWJ3J1Roh/uufsAmuU2VlMxfjFJFhHCQnJ2aixClr7A26B4IRac6g!/r/dE8BAAAAAAAA'
+      },
+      {
+
+        id: 'http://r.photo.store.qq.com/psb?/V12EzWWJ3J1Roh/GHkJA1Lex13EAYMhxZu.QZC5.M64IJn9tAlFrBzDjh8!/r/dEkBAAAAAAAA'
+      },
+      {
+
+        id:'http://r.photo.store.qq.com/psb?/V12EzWWJ3J1Roh/TqdrJ7PySDiq8g*GehVmJa7dL0WJqJ3TzvPJMc0s.yo!/r/dL8AAAAAAAAA' 
       }
 
 
     ],
+    x:null,
    arry:[],
-    
+   index:null,
+    testUrl:null
 
   },
   showModal(e) {
-    this.setData({
-      modalName: e.currentTarget.dataset.target
+    var that=this;
+   var index= e.currentTarget.dataset.x;
+    var x=[]
+    x.push(that.data.club[index].id)
+   
+
+    that.setData({
+      modalName: e.currentTarget.dataset.target,
+  
+      testUrl:x
+
     })
+  
+    console.log(that.data.index);
+    console.log(that.data.testUrl)
   },
   hideModal(e) {
     this.setData({
@@ -50,23 +68,28 @@ color:[
   /**
    * 生命周期函数--监听页面加载
    */
+ 
   onLoad: function (options) {
-  wx.request({
-    url: 'http://202.206.221.94:8080/league',
-    data: {
+  var that=this;
+  that.setData({
 
-
-    },
-    method: 'POST',
-    header: {
-      'content-type': 'application/x-www-form-urlencoded;charset=utf-8;',
-
-    },
- success:function(res){
-
-   console.log(res.data)
- }
+    club:app.globalData.club
   })
+ /* var x=that.data.images[i]*/
+for(var i=0;i<=6;i++){
+    var a =that.data.images[i]
+    var b = that.data.club[i]
+   var obj = Object.assign(a,b);
+   that.data.arry.push(obj);
+ 
+}
+
+    that.setData({
+club:that.data.arry
+
+    })   
+     console.log(that.data.club)
+/*console.log('test；'+that.data.club.color)*/
     
   },
 

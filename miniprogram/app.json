@@ -4,15 +4,11 @@
     "pages/circle/circle",
     "pages/yushi/yushi",
     "pages/jifang/jifang",
-   
-    
     "pages/wx/wx",
-
     "pages/wode/wode",
     "pages/main/main",
     "pages/mine/mine",
     "pages/index/index",
-   
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
